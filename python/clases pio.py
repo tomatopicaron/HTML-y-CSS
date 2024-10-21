@@ -111,3 +111,26 @@ if es_bisiesto(año):
     print(f"El año {año} es bisiesto.")
 else:
     print(f"El año {año} no es bisiesto.")
+    
+
+def calcular_resistencia(voltage, current):
+    if current == 0:
+        return "La corriente no puede ser cero, ya que no se puede calcular la resistencia."
+    resistencia = voltage / current
+    return resistencia
+
+def main():
+    print("Cálculo de Resistencia Eléctrica")
+    
+    try:
+        voltage = float(input("Introduce el voltaje (en voltios): "))
+        current = float(input("Introduce la corriente (en amperios): "))
+        
+        resistencia = calcular_resistencia(voltage, current)
+        print(f"La resistencia eléctrica es: {resistencia:.2f} ohmios")
+        
+    except ValueError:
+        print("Por favor, introduce valores numéricos válidos.")
+
+if __name__ == "__main__":
+    main()
