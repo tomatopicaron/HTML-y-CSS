@@ -146,3 +146,19 @@ def calcular_raiz_cuadrada(numero):
 numero = float(input("Introduce un número: "))
 resultado = calcular_raiz_cuadrada(numero)
 print(f"La raíz cuadrada de {numero} es {resultado}")
+
+import numpy as np
+
+# Listas de ejemplo
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+y = [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+
+# Dividir las listas en 8 partes iguales
+x_dividido = np.array_split(x, 8)
+y_dividido = np.array_split(y, 8)
+
+# Imprimir las divisiones
+for i in range(8):
+    print(f"Parte {i+1}:")
+    print(f"x: {x_dividido[i]}")
+    print(f"y: {y_dividido[i]}")
